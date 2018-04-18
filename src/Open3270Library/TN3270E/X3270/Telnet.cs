@@ -1438,7 +1438,7 @@ namespace Open3270.TN3270
 					{
 						NetworkStream mNetworkStream = new NetworkStream(socketBase, false);
 						SslStream ssl = new SslStream(mNetworkStream, false, new RemoteCertificateValidationCallback(cryptocallback));
-						ssl.AuthenticateAsClient(this.address);
+						ssl.AuthenticateAsClient(this.address, null, SslProtocols.Tls12, true);
 						trace.WriteLine("SSL Connection made. Encryption is '" + ssl.IsEncrypted + "'");
 
 						this.socketStream = ssl;
