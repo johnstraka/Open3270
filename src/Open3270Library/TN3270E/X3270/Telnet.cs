@@ -13,6 +13,7 @@ using Open3270;
 using Open3270.Library;
 using System.Net.Security;
 using System.Collections.Generic;
+using System.Security.Authentication;
 
 namespace Open3270.TN3270
 {
